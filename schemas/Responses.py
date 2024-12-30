@@ -6,7 +6,7 @@ class SuccessResponse(BaseModel):
     status: int
     data: dict
     class Config:
-        schema_extra = {
+        json_schema_extra  = {
             "example": {
                 "message": "Success",
                 "status": 200,
@@ -20,7 +20,7 @@ class ErrorResponse(BaseModel):
     status: int
     data: dict = {}
     class Config:
-        schema_extra = {
+        json_schema_extra  = {
             "example": {
                 "message": "Error",
                 "status": 500,
