@@ -5,11 +5,18 @@ from schemas.Responses import ErrorResponse, SuccessResponse
 from settings import settings
 from pymongo.mongo_client import MongoClient
 from mongoengine import connect
-
+from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/registro/usuarios")
 async def registro(payload: FormularioBase, response: Response):
