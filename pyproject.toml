@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "back-formulario"
+version = "0.1.0"
+description = "back para formulario"
+authors = ["Ilker <ilkerfrancisco@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.6"
+uvicorn = "^0.34.0"
+pymongo = {extras = ["srv"], version = "^4.10.1"}
+pydantic-settings = "^2.7.0"
+mongoengine = "^0.29.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
