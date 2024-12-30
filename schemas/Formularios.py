@@ -23,6 +23,6 @@ class RespuestaFormulario(me.Document):
     meta = {
         'collection': 'respuestas_formulario',
         'indexes': [
-            {'fields': ['email'], 'unique': True}  # Índice único en email
+            {'fields': ['email', 'id_promocion'], 'unique': True}  # Índice único en email
         ]
     }
